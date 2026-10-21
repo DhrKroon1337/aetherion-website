@@ -31,7 +31,10 @@ Then open `http://localhost:8080`.
 
 ## Deployment
 
-Hosted via GitHub Pages on the `main` branch (`/` root).
+Hosted via GitHub Pages on the `main` branch (`/` root):
+https://dhrkroon1337.github.io/aetherion-website/
+
+**Coming:** own domain **vectoris.org** (DNS requested). Once active: add a `CNAME` file with `vectoris.org`, set the custom domain in *Settings → Pages*, and switch the contact button to an e-mail address on that domain.
 
 ---
 
