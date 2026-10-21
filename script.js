@@ -18,6 +18,9 @@
 
   let W, H, particles;
 
+  // Wie in het systeem "minder beweging" heeft ingesteld, krijgt een stilstaand beeld
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   function resize() {
     W = canvas.width  = canvas.offsetWidth;
     H = canvas.height = canvas.offsetHeight;
@@ -93,7 +96,7 @@
       }
     }
 
-    requestAnimationFrame(draw);
+    if (!reduceMotion) requestAnimationFrame(draw);
   }
 
   function getCount() {
@@ -103,6 +106,7 @@
   window.addEventListener('resize', () => {
     resize();
     initParticles(getCount());
+    if (reduceMotion) draw();
   });
 
   resize();
